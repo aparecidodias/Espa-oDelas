@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço D'Elas - Agendamento</title>
+    <link rel="stylesheet" href="style-agendamento.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">Início</a>
+        <a href="valores.html">Serviços</a>
+        <a href="agendamento.html" class="active">Agendar</a>
+    </nav>
+
+    <header class="header-reserva">
+        <div class="logo-container">
+            <p class="sub-welcome">Reserve seu momento no</p>
+            <h1>ESPAÇO <span>D'Elas.</span></h1>
+            <div class="florals-sub">✿ • 🌸 • ✿</div>
+        </div>
+    </header>
+
+    <section class="reservation-section">
+        <div class="reservation-container">
+            <h2 class="section-title">Encontre seu horário ideal</h2>
+            <p class="section-intro">Selecione o serviço e o melhor momento para você. Sua beleza e relaxamento são nossa prioridade.</p>
+            
+            <form id="agendamento-form">
+                <div class="form-group">
+                    <label for="servico">Serviço Desejado:</label>
+                    <select id="servico" name="servico" required>
+                        <option value="" disabled selected>Escolha um serviço...</option>
+                        <optgroup label="Design">
+                            <option value="Sobrancelha Comum">Sobrancelha Comum</option>
+                            <option value="Sobrancelha com Henna">Sobrancelha com Henna</option>
+                        </optgroup>
+                        <optgroup label="Depilação">
+                            <option value="Buço, Axilas, Virilha, Perna">Buço, Axilas, Virilha, Perna</option>
+                        </optgroup>
+                        <optgroup label="Massoterapia">
+                            <option value="Massagem Relaxante">Massagem Relaxante</option>
+                            <option value="Drenagem Linfática">Drenagem Linfática</option>
+                        </optgroup>
+                        <optgroup label="Cuidado com os Pés">
+                            <option value="Plástica dos Pés">Plástica dos Pés</option>
+                        </optgroup>
+                    </select>
+                </div>
+                
+                <div class="form-group row">
+                    <div class="col">
+                        <label for="data">Data Desejada:</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    <div class="col">
+                        <label for="hora">Hora Desejada:</label>
+                        <input type="time" id="hora" name="hora" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="whatsapp">Seu WhatsApp:</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="(xx) xxxxx-xxxx" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Reservar Agora</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="franciny-callout">
+        <div class="manicure-highlight">
+            <div class="manicure-icon">💅</div>
+            <p>Precisa de manicure? Franciny está à disposição para te atender! Agende seu horário com ela.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Espaço D'Elas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link para o script de agendamento (opcional) -->
+
+</body>
+</html>

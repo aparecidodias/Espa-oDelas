@@ -1,0 +1,218 @@
+/* Definições de Estilo para a Página de Agendamento */
+:root {
+    --primary-color: #5c1d24; /* Vinho escuro */
+    --secondary-color: #fcd5dc; /* Rosa suave */
+    --accent-color: #d4af37; /* Dourado */
+    --font-family-serif: 'Cinzel', serif;
+    --font-family-script: 'Pinyon Script', cursive;
+    --font-family-sans-serif: 'Montserrat', sans-serif;
+    --bg-light: #fff0f3;
+}
+
+body {
+    background-color: var(--secondary-color);
+    font-family: var(--font-family-sans-serif);
+    color: var(--primary-color);
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 70px; /* Espaço para a navbar */
+}
+
+/* Navbar (pode ser a mesma do index.html ou valores.html) */
+.navbar {
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 18px 28px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: background 0.3s;
+}
+
+.navbar a.active, .navbar a:hover {
+    background-color: #421217;
+    color: var(--accent-color);
+}
+
+/* Cabeçalho da Reserva */
+.header-reserva {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.logo-container {
+    border: 3px double var(--accent-color);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 25px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.logo-container h1 {
+    font-family: var(--font-family-serif);
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.logo-container h1 span {
+    font-weight: 600;
+}
+
+.florals-sub {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+/* Seção do Formulário de Agendamento */
+.reservation-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.reservation-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.section-title {
+    font-family: var(--font-family-script);
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.section-intro {
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #8c434d;
+}
+
+/* Estilo do Formulário */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #5c1d24;
+}
+
+input[type=text], input[type=tel], input[type=date], input[type=time], select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e0b0b8;
+    border-radius: 8px;
+    font-family: var(--font-family-sans-serif);
+    font-size: 1rem;
+    color: #5c1d24;
+    transition: border-color 0.3s;
+}
+
+input[type=text]:focus, input[type=tel]:focus, input[type=date]:focus, input[type=time]:focus, select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.col {
+    flex: 1;
+}
+
+/* Botão de Envio */
+.submit-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-family: var(--font-family-serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #421217;
+    transform: translateY(-2px);
+}
+
+/* Destaque para Franciny */
+.franciny-callout {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.manicure-highlight {
+    max-width: 500px;
+    margin: 0 auto;
+    border: 2px dashed var(--primary-color);
+    border-radius: 12px;
+    padding: 20px;
+    background-color: var(--bg-light);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.manicure-icon {
+    font-size: 2rem;
+}
+
+.manicure-highlight p {
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.8rem;
+    color: rgba(92, 29, 36, 0.7);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .navbar a {
+        padding: 12px 15px;
+        font-size: 0.8rem;
+    }
+    .logo-container h1 {
+        font-size: 2.2rem;
+    }
+    .section-title {
+        font-size: 2.8rem;
+    }
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
