@@ -200,19 +200,86 @@ footer {
 }
 
 /* Responsividade */
+/* ==========================================================================
+   AJUSTES EXCLUSIVOS PARA CELULAR (Telas de até 600px de largura)
+   ========================================================================== */
 @media (max-width: 600px) {
+    
+    /* Corrige a barra de botões superior para não ocupar muito espaço */
+    .navbar {
+        justify-content: space-around; /* Distribui os botões igualmente na tela */
+    }
+
     .navbar a {
-        padding: 12px 15px;
-        font-size: 0.8rem;
+        padding: 12px 10px; /* Diminui o espaço interno dos botões */
+        font-size: 0.75rem; /* Letra menor e mais delicada */
+        letter-spacing: 0.5px; /* Reduz o espaçamento entre as letras */
     }
+
+    /* Ajusta o topo da página para não empurrar tudo muito para baixo */
+    body {
+        padding-top: 50px; 
+    }
+
+    .header-reserva {
+        padding: 25px 10px 15px; /* Reduz as margens do cabeçalho */
+    }
+
+    /* Ajusta a moldura do logotipo */
+    .logo-container {
+        padding: 20px 15px;
+        max-width: 90%; /* Garante que não vai cortar nas bordas */
+    }
+
+    .sub-welcome {
+        font-size: 0.9rem;
+    }
+
     .logo-container h1 {
-        font-size: 2.2rem;
+        font-size: 1.8rem; /* Nome "Espaço D'Elas" menor e elegante */
     }
+
+    /* Ajusta a seção do formulário de agendamento */
+    .reservation-container {
+        padding: 20px 15px; /* Deixa o bloco de agendamento menos gigante */
+    }
+
     .section-title {
-        font-size: 2.8rem;
+        font-size: 2.4rem; /* Diminui a fonte manuscrita */
+        margin-bottom: 5px;
     }
+
+    .section-intro {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    /* Coloca os campos de Data e Hora um embaixo do outro no celular */
     .row {
         flex-direction: column;
         gap: 0;
+    }
+
+    /* Ajusta os campos de digitação */
+    input[type=text], input[type=tel], input[type=date], input[type=time], select {
+        padding: 10px; /* Campos um pouco mais finos */
+        font-size: 0.9rem;
+    }
+
+    /* Botão de confirmação final */
+    .submit-btn {
+        width: 100%; /* O botão ocupa a largura do formulário para facilitar o toque */
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+
+    /* Alerta da Franciny */
+    .manicure-highlight {
+        padding: 15px;
+        gap: 10px;
+    }
+    
+    .manicure-highlight p {
+        font-size: 0.85rem; /* Texto menor para a dica da manicure */
     }
 }
